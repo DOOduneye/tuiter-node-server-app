@@ -18,7 +18,7 @@ const updateUser = (req, res) => {
 
 const deleteUser = (req, res) => {
     const userId = req.params['uid'];
-    users = users.filter((usr) => usr._id !== userId);
+    users = users.filter(usr => usr._id !== userId);
     res.sendStatus(200);
 }
 
