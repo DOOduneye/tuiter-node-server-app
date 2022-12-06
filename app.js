@@ -24,8 +24,9 @@ mongoose.connect(CONNECTION_STRING)
 
 const app = express();
 app.use(express.json());
-app.use(cors());
-
+app.use(cors({
+    origin: 'https://a9--cerulean-marzipan-1cea17.netlify.app'
+}))
 TuitsController(app);
 HelloController(app);
 UserController(app);
